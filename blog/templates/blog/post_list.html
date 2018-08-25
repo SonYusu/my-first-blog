@@ -4,20 +4,16 @@
     </head>
     <body>
         <div>
-            <h1><a href="">Joker Blog</a></h1>
+            <h1><a href="">Jokers Blog</a></h1>
         </div>
 
-        <div>
-            <h2><a href="">My First Post</a></h2>
-            <p>published : 2018/08/25</p>
-            <p>I was so impressed by joker in dark knight</p>
-        </div>
-
-        <div>
-            <h2><a href="">My Second Post</a></h2>
-            <p>published : 2018/08/25</p>
-            <p>I want to become a high level developer</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.published_date }}</p>
+                <p>{{ post.text }}</p>
+            </div>
+        {% endfor %}
     </body>
 
 </html>
